@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C1E9C37A-8E11-44B4-8253-E8439B5EA3BB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>teamKeep</RootNamespace>
+    <AssemblyName>TeamKeep</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\viann\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>BD83D8C375E38CF1E598B6202C1C6139B2A63BEE</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>teamKeep_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>.\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CLASSES\CONTROLES\chaveSwitch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORMS\CALENDÁRIO\agenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\CALENDÁRIO\agenda.Designer.cs">
+      <DependentUpon>agenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CLASSES\ALERTAS\alertas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CLASSES\ALERTAS\alertas.Designer.cs">
+      <DependentUpon>alertas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\CONECTAR\cadastrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\CONECTAR\cadastrar.Designer.cs">
+      <DependentUpon>cadastrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\CALENDÁRIO\calendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\CALENDÁRIO\calendario.Designer.cs">
+      <DependentUpon>calendario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\CALENDÁRIO\comp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\CALENDÁRIO\comp.Designer.cs">
+      <DependentUpon>comp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\CONECTAR\conectar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\CONECTAR\conectar.Designer.cs">
+      <DependentUpon>conectar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CLASSES\BANCO DE DADOS\conexoesDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FORMS\CONFIGURAÇÕES\configuracoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\CONFIGURAÇÕES\configuracoes.Designer.cs">
+      <DependentUpon>configuracoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\NOTAS\criarNota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\NOTAS\criarNota.Designer.cs">
+      <DependentUpon>criarNota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\CONECTAR\entrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\CONECTAR\entrar.Designer.cs">
+      <DependentUpon>entrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\FINANÇAS\financas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FINANÇAS\financas.Designer.cs">
+      <DependentUpon>financas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\RELÓGIO\alarme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\RELÓGIO\alarme.Designer.cs">
+      <DependentUpon>alarme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\RELÓGIO\cronometro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\RELÓGIO\cronometro.Designer.cs">
+      <DependentUpon>cronometro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\RELÓGIO\temporizador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\RELÓGIO\temporizador.Designer.cs">
+      <DependentUpon>temporizador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\RESUMO\home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\RESUMO\home.Designer.cs">
+      <DependentUpon>home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\NOTAS\nota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\NOTAS\nota.Designer.cs">
+      <DependentUpon>nota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\NOTAS\notas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\NOTAS\notas.Designer.cs">
+      <DependentUpon>notas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="FORMS\PROGRESSO\progresso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\PROGRESSO\progresso.Designer.cs">
+      <DependentUpon>progresso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FORMS\RELÓGIO\relogio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\RELÓGIO\relogio.Designer.cs">
+      <DependentUpon>relogio.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FORMS\CALENDÁRIO\agenda.resx">
+      <DependentUpon>agenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CLASSES\ALERTAS\alertas.resx">
+      <DependentUpon>alertas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\CONECTAR\cadastrar.resx">
+      <DependentUpon>cadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\CALENDÁRIO\calendario.resx">
+      <DependentUpon>calendario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\CALENDÁRIO\comp.resx">
+      <DependentUpon>comp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\CONECTAR\conectar.resx">
+      <DependentUpon>conectar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\CONFIGURAÇÕES\configuracoes.resx">
+      <DependentUpon>configuracoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\NOTAS\criarNota.resx">
+      <DependentUpon>criarNota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\CONECTAR\entrar.resx">
+      <DependentUpon>entrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\FINANÇAS\financas.resx">
+      <DependentUpon>financas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\RELÓGIO\alarme.resx">
+      <DependentUpon>alarme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\RELÓGIO\cronometro.resx">
+      <DependentUpon>cronometro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\RELÓGIO\temporizador.resx">
+      <DependentUpon>temporizador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\RESUMO\home.resx">
+      <DependentUpon>home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\NOTAS\nota.resx">
+      <DependentUpon>nota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\NOTAS\notas.resx">
+      <DependentUpon>notas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\PROGRESSO\progresso.resx">
+      <DependentUpon>progresso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="FORMS\RELÓGIO\relogio.resx">
+      <DependentUpon>relogio.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="teamKeep_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
